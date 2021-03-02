@@ -26,7 +26,7 @@ SECRET_KEY = 'a4&-ov639n-vbc=3=^&b5zpx%8q%uiw8ju1g-sw6e%l@vt3eq8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.herokuapp.com']
+ALLOWED_HOSTS = []
 
 LOGIN_REDIRECT_URL = 'dashboard'
 
@@ -165,9 +165,7 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-import dj_database_url 
-prod_db  =  dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
+
 
 
 django_heroku.settings(locals())
